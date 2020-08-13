@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 class CyclobikeViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 
-class CycloAdapter :RecyclerView.Adapter<CyclobikeViewHolder>(){
+class CycloAdapter (val lista: List<CycloAdapter>):RecyclerView.Adapter<CyclobikeViewHolder>(){
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CyclobikeViewHolder {
@@ -17,7 +17,7 @@ class CycloAdapter :RecyclerView.Adapter<CyclobikeViewHolder>(){
     }
 
     override fun getItemCount(): Int {
-        TODO("Not yet implemented")
+      return lista.size
     }
 
     override fun onBindViewHolder(holder: CyclobikeViewHolder, position: Int) {
